@@ -1,0 +1,90 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    },
+
+    "viewAll": "View all",
+    "@viewAll": {
+      "description": "View all items"
+    },
+
+    "categoriesListTitle": "Categories",
+    "@categoriesListTitle": {
+      "description": "Categories Section Title"
+    },
+
+    "topPicksListTitle": "Top Picks",
+    "@topPicksListTitle": {
+      "description": "Top Picks Section Title"
+    },
+
+    "recentOrdersListTitle": "Recent orders",
+    "@recentOrdersListTitle": {
+      "description": "Recent Orders Section Title"
+    },
+    "home": "Home",
+    "favorite": "Favorite",
+    "profile": "Profile",
+    "addToCart": "Add to cart",
+    "updateCart": "Update cart",
+    "yourOrderAndRecords": "Your Order and records",
+    "notifications": "Notifications",
+    "contacts": "Contacts",
+    "termsAndConditions": "Terms and Conditions",
+    "faqAndSupport": "FAQ and Support",
+    "signOut": "Sign out",
+    "yourCart": "Your cart",
+    "checkout": "Checkout",
+    "yourOrder": "Your order",
+    "estimatedTime": "Estimated time",
+    "yourOrderID": "Your order ID",
+    "cancel": "Cancel",
+    "orderStatus": "Order status",
+    "orderSuccfullyPlaced": "Order successfully placed",
+    "orderIsBeingPrepared": "Order is being prepared",
+    "readyToPickUp": "Ready to pick up",
+    "delivered": "Delivered",
+    "orderItems": "Order Items",
+    "cancleOrder": "Cancle Order",
+    "cancleOrderMessage": "Are you sure you want to cancle this order?",
+    "yes": "Yes",
+    "orderInProcess": "Order in process",
+    "orderInProcessMessage": "You already have an order in progress. You can only have one order in progress at a time.",
+    "sorry": "Sorry",
+    "noTakingOrders": "We are not taking order right now.\nThank you for being with us.",
+    "email":"Email",
+    "password":"Password",
+    "forgotPassword":"Forgot Password?",
+    "login": "Login",
+    "donthaveAccount":"Don't have an account?",
+    "register":"Register",
+    "allRight":"All rights reserved by Elvan © 2023",
+    "termsConditions":"Terms & Conditions",
+    "emailHint":"Enter e-mail",
+    "codeHint":"Enter code",
+    "getCode":"Get Code",
+    "verify":"Verify",
+    "changePassword":"Change Password",
+    "username":"Username",
+    "signup":"Sign Up",
+    "passwordReset":"Password reset",
+    "phone":"Phone",
+    "required":"Required",
+    "optional":"Optional",
+    "emailSent":"Email Sent",
+    "resetPasswordMsg":"Reset Password Email has been sent to your email address",
+    "cancel":"Cancel",
+    "yes":"Yes",
+    "usernameEmpty":"Enter Username",
+    "emailEmpty":"Enter Email",
+    "emailInvalid":"Invalid email",
+    "phoneEmpty":"Enter your phone",
+    "passwordEmpty":"Enter password",
+    "yourCart":"Your Cart",
+    "sorry":"Sorry!",
+    "cartEmpty":"Your cart is empty",
+    "addFavorite":"Add your favorite",
+    "favorite":"Favorite",
+    "profile":"Profile"
+}

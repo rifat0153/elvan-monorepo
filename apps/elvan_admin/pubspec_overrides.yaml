@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: elvan_shared
+dependency_overrides:
+  elvan_shared:
+    path: ..\\..\\packages\\elvan_shared

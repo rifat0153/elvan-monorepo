@@ -1,0 +1,115 @@
+name: elvan
+description: Elvan client application for food ordering.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.1+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: # Add this line
+    sdk: flutter
+  intl: ^0.18.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+  # shared libs
+  elvan_shared:
+    path: ./../elvan_shared
+
+  # DB
+  shared_preferences: ^2.0.17
+
+  # Firebase
+  firebase_core: ^2.10.0
+  firebase_auth: ^4.1.2
+  cloud_firestore: ^4.1.0
+  firebase_storage: ^11.0.6
+
+  # DI, State Mgmt, Hooks
+  hooks_riverpod: ^2.3.2
+  riverpod_annotation: ^2.0.2
+
+  # routing
+  auto_route: ^5.0.4
+
+  # screen responsive size and grid layout
+  flutter_screenutil: ^5.6.0
+  flutter_layout_grid: ^2.0.1
+
+  # images
+  cached_network_image: ^3.2.2
+  flutter_svg: ^1.1.6
+
+  freezed_annotation: ^2.2.0
+
+  # design
+  timeline_tile: ^2.0.0
+  carousel_slider: ^4.2.1
+  #check update
+  upgrader: ^6.2.0
+  in_app_update: ^4.0.1
+  package_info_plus: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+  build_runner: ^2.3.2
+  freezed: ^2.2.1
+  json_serializable: ^6.5.4
+  riverpod_generator: ^2.1.4
+  auto_route_generator: ^5.0.3
+
+  flutter_native_splash: ^2.2.19
+  flutter_launcher_icons: ^0.13.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/svgs/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
