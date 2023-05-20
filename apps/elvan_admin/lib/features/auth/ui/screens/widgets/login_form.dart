@@ -24,6 +24,7 @@ class LoginForm extends HookConsumerWidget {
 
     useEffect(() {
       return (() {
+        // ignore: invalid_use_of_protected_member
         _formKey.currentState?.dispose();
       });
     }, const []);
@@ -107,17 +108,20 @@ class LoginForm extends HookConsumerWidget {
                       ),
                     ),
                   ),
-                  onPressed: authState.loading
-                      ? () {}
-                      : () {
-                          // Validate returns true if the form is valid, or false otherwise.
-                          if (_formKey.currentState!.validate()) {
-                            print("-------------click");
-                            authNotifier.onEvent(AuthEvent.loginWithPasswordAndEmail(email: emailTextController.text, password: passwordTextController.text));
-                            // authNotifier.register(emailTextController.text,
-                            //     passwordTextController.text);
-                          }
-                        },
+                  onPressed: () {
+                    if (authState.loading) return;
+
+                    // Validate returns true if the form is valid, or false otherwise.
+                    if (_formKey.currentState!.validate()) {
+                      debugPrint("-------------click");
+                      authNotifier.onEvent(
+                        AuthEvent.loginWithPasswordAndEmail(
+                          email: emailTextController.text,
+                          password: passwordTextController.text,
+                        ),
+                      );
+                    }
+                  },
                   child: authState.loading
                       ? const Center(
                           child: SizedBox(
