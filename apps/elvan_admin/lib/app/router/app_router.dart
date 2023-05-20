@@ -16,19 +16,31 @@ class AppRouter extends $AppRouter {
           path: '/login',
           page: LoginRoute.page,
         ),
-        AutoRoute(path: '/dashboard', page: LeftTabRoute.page, initial: true, guards: [
-          AuthGuard()
-        ], children: [
-          AutoRoute(path: 'home', page: HomeRoute.page, children: [
-            AutoRoute(path: '', page: NewOrderRoute.page),
-            AutoRoute(path: 'processing', page: ProcceingRoute.page),
-            AutoRoute(path: 'ready', page: ReadyRoute.page),
-            AutoRoute(path: 'delivered', page: DeliveredRoute.page),
-          ]),
-          AutoRoute(path: 'settings', page: SettingsRoute.page, children: [
-            AutoRoute(path: 'foods', page: FoodsRoute.page),
-            AutoRoute(path: 'timer', page: TimerRoute.page),
-          ]),
-        ]),
+        AutoRoute(
+          path: '/dashboard',
+          page: LeftTabRoute.page,
+          initial: true,
+          guards: [AuthGuard()],
+          children: [
+            AutoRoute(
+              path: 'home',
+              page: HomeRoute.page,
+              children: [
+                AutoRoute(path: '', page: NewOrderRoute.page),
+                AutoRoute(path: 'processing', page: ProcceingRoute.page),
+                AutoRoute(path: 'ready', page: ReadyRoute.page),
+                AutoRoute(path: 'delivered', page: DeliveredRoute.page),
+              ],
+            ),
+            AutoRoute(
+              path: 'settings',
+              page: SettingsRoute.page,
+              children: [
+                AutoRoute(path: 'foods', page: FoodsRoute.page),
+                AutoRoute(path: 'timer', page: TimerRoute.page),
+              ],
+            ),
+          ],
+        ),
       ];
 }

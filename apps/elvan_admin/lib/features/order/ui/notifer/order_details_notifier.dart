@@ -1,10 +1,11 @@
 import 'package:elvan_admin/features/order/ui/states/order_details_state.dart';
 import 'package:elvan_admin/features/timer/domain/usecases/setting_usecase.dart';
 import 'package:elvan_shared/domain_models/order/order.dart';
-import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final orderDtatilsProvider = NotifierProvider<OrderDetatilsNotifier, OrderDetatilsState>(OrderDetatilsNotifier.new);
+final orderDtatilsProvider = NotifierProvider<OrderDetatilsNotifier, OrderDetatilsState>(
+  OrderDetatilsNotifier.new,
+);
 
 class OrderDetatilsNotifier extends Notifier<OrderDetatilsState> {
   @override
@@ -17,18 +18,15 @@ class OrderDetatilsNotifier extends Notifier<OrderDetatilsState> {
     state = state.togglePanel();
   }
 
-  void selecteItem({
-    required BuildContext context,
-    required Order order,
-  }) {
+  void selecteItem({required Order order}) {
     OrderDetatilsState nextState = state;
 
     nextState = state.setOrder(order);
 
-    if (state.order?.id == order.id) {
-      nextState = state.togglePanel();
+    if (nextState.order?.id == order.id) {
+      nextState = nextState.togglePanel();
     } else {
-      nextState = state.openPanel();
+      nextState = nextState.openPanel();
     }
 
     nextState = nextState.updateXOffset();

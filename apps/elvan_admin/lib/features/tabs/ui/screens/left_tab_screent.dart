@@ -16,6 +16,7 @@ class LeftTabScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final menuState = ref.watch(menuProvider);
+
     return AutoTabsRouter.tabBar(
       routes: const [HomeRoute(), SettingsRoute()],
       builder: (context, child, animation) {
@@ -89,16 +90,18 @@ class LeftBar extends StatelessWidget {
                 ),
 
                 const Spacer(),
+
                 //********* settings  */
                 Padding(
                   padding: const EdgeInsets.only(bottom: 30),
                   child: MenuIconBtn(
-                      seleectedIndex: tabsRouter.activeIndex,
-                      index: 1,
-                      onClick: () {
-                        tabsRouter.setActiveIndex(1);
-                      },
-                      path: AppAssets.settings),
+                    seleectedIndex: tabsRouter.activeIndex,
+                    index: 1,
+                    onClick: () {
+                      tabsRouter.setActiveIndex(1);
+                    },
+                    path: AppAssets.settings,
+                  ),
                 )
               ],
             ),

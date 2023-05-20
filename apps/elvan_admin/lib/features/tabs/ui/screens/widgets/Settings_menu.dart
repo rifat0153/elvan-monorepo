@@ -30,23 +30,39 @@ class SettingsMenu extends HookConsumerWidget {
         Padding(
           padding: const EdgeInsets.only(top: 5, left: 24, right: 10),
           child: MenuBtn(
-              index: 0,
-              selectedIndex: router.activeIndex,
-              onClick: () {
-                router.setActiveIndex(0);
-              },
-              title: AppStrings.foodItems),
+            index: 0,
+            selectedIndex: router.activeIndex,
+            onClick: () {
+              router.setActiveIndex(0);
+            },
+            title: AppStrings.foodItems,
+          ),
         ),
+
         //************ Processing */
         Padding(
           padding: const EdgeInsets.only(top: 5, left: 24, right: 10),
           child: MenuBtn(
-              selectedIndex: router.activeIndex,
-              index: 1,
-              onClick: () {
-                router.setActiveIndex(1);
-              },
-              title: AppStrings.time),
+            selectedIndex: router.activeIndex,
+            index: 1,
+            onClick: () {
+              router.setActiveIndex(1);
+            },
+            title: AppStrings.time,
+          ),
+        ),
+
+        // TODO: remove this
+        Padding(
+          padding: const EdgeInsets.only(top: 5, left: 24, right: 10),
+          child: MenuBtn(
+            selectedIndex: router.activeIndex,
+            index: 2,
+            onClick: () {
+              router.setActiveIndex(2);
+            },
+            title: "DEV",
+          ),
         ),
       ],
     );

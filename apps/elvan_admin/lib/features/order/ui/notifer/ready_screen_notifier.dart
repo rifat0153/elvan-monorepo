@@ -32,10 +32,8 @@ class ReadyScreenNotifier extends Notifier<void> {
   ) {
     final orderDetatilsNotifier = ref.read(orderDtatilsProvider.notifier);
     Scaffold.of(context).openEndDrawer();
-    orderDetatilsNotifier.selecteItem(
-      context: context,
-      order: order,
-    );
+
+    orderDetatilsNotifier.selecteItem(order: order);
   }
 
   _onChangeStatus(

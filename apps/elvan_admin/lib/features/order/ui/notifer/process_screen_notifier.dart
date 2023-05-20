@@ -33,10 +33,7 @@ class ProcessScreenNotifier extends Notifier<void> {
 
     Scaffold.of(context).openEndDrawer();
 
-    orderDetatilsNotifier.selecteItem(
-      context: context,
-      order: order,
-    );
+    orderDetatilsNotifier.selecteItem(order: order);
   }
 
   _onChangeStatus(

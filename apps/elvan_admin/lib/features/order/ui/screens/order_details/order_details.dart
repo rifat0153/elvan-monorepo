@@ -12,6 +12,7 @@ import 'package:elvan_admin/shared/constants/app_strings.dart';
 import 'package:elvan_shared/domain_models/cart/cart_item.dart';
 import 'package:elvan_shared/domain_models/order/order_status.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class OrderDetatils extends HookConsumerWidget {
@@ -20,6 +21,11 @@ class OrderDetatils extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(orderDtatilsProvider);
+
+    useEffect(() {
+      debugPrint('screen: order.id: ${state.order?.id}');
+      return null;
+    }, [state.order?.id]);
 
     return Container(
       decoration: const BoxDecoration(border: Border(left: BorderSide(color: AppColors.gray400, width: 1))),
@@ -81,7 +87,8 @@ class OrderDetatils extends HookConsumerWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 25, left: 10, bottom: 10),
-          child: CustomerInfo(userId: state.order!.userId),
+          // TODO: fix null order
+          child: CustomerInfo(userId: state.order?.userId ?? "no_id"),
         ),
         //********************* Order Items */
         Padding(

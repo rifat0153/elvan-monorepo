@@ -54,10 +54,8 @@ class NewOrderScreenNotifier extends Notifier<UiState<List<Order>>> {
   ) {
     final orderDetatilsNotifier = ref.read(orderDtatilsProvider.notifier);
     Scaffold.of(context).openEndDrawer();
-    orderDetatilsNotifier.selecteItem(
-      context: context,
-      order: order,
-    );
+
+    orderDetatilsNotifier.selecteItem(order: order);
   }
 
   _onReject(

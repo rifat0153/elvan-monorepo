@@ -84,13 +84,14 @@ class DeliveredScreen extends HookConsumerWidget {
                               shrinkWrap: true,
                               itemBuilder: (BuildContext context, int index) {
                                 final OrderDto order = OrderDto.fromJson(state.orders[index].data()!);
+                                
                                 return DeliveredItem(
                                   order: Order.fromDto(order),
                                   key: Key(order.id),
                                   selectedOrder: orderDetatilsState.order,
                                   onClick: () {
                                     Scaffold.of(context).openEndDrawer();
-                                    orderDetatilsNotifier.selecteItem(context: context, order: Order.fromDto(order));
+                                    orderDetatilsNotifier.selecteItem(order: Order.fromDto(order));
                                   },
                                 );
                               },
