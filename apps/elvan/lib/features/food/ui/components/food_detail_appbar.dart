@@ -24,7 +24,12 @@ class FoodDetailAppBar extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            icon: const Icon(Icons.shopping_cart),
+            icon: const CircleAvatar(
+                backgroundColor: AppColors.black_10,
+                child: Icon(
+                  Icons.shopping_cart,
+                  color: AppColors.white,
+                )),
             onPressed: () {
               context.pushRoute(const CartRoute());
             },

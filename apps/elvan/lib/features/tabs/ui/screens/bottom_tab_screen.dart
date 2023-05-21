@@ -66,14 +66,26 @@ class BottomTabScreen extends HookConsumerWidget {
                 NavigationDestination(
                   icon: const Icon(Icons.home),
                   label: AppLocalizations.of(context)!.home,
+                  selectedIcon: const Icon(
+                    Icons.home,
+                    color: AppColors.primaryRed,
+                  ),
                 ),
                 NavigationDestination(
                   icon: const Icon(Icons.favorite),
                   label: AppLocalizations.of(context)?.favorite ?? 'Favorite',
+                  selectedIcon: const Icon(
+                    Icons.favorite,
+                    color: AppColors.primaryRed,
+                  ),
                 ),
                 NavigationDestination(
                   icon: const Icon(Icons.person),
                   label: AppLocalizations.of(context)?.profile ?? 'Profile',
+                  selectedIcon: const Icon(
+                    Icons.person,
+                    color: AppColors.primaryRed,
+                  ),
                 ),
               ],
             );
