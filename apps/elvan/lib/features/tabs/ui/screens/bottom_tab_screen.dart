@@ -11,13 +11,17 @@ import 'package:elvan/shared/components/background/screen_background.dart';
 import 'package:elvan/shared/constants/app_asset.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:upgrader/upgrader.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 class BottomTabScreen extends HookConsumerWidget {
   const BottomTabScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(context, ref) {
-    ref.watch(androidUpdateProvider);
+    useEffect(() {
+      androidUpdater(ref);
+      return;
+    }, const []);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(

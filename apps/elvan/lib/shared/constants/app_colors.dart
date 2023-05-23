@@ -8,6 +8,7 @@ class AppColors {
 
   static const black = Color(0xFF000000);
   static const black_10 = Color.fromRGBO(0, 0, 0, 0.1);
+  static const black_30 = Color.fromRGBO(0, 0, 0, 0.3);
 
   static const white = Color(0xFFFFFFFF);
   static const white_15 = Color.fromRGBO(255, 255, 255, 0.15);

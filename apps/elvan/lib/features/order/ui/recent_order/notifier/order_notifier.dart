@@ -28,9 +28,12 @@ class OrderNotifier extends Notifier<void> {
       throw Exception('User is not logged in');
     }
 
+    final random = math.Random().nextInt(99).toString();
+    final milliseconds = DateTime.now().millisecondsSinceEpoch.toString();
+
     final order = Order(
       createdAt: fs.Timestamp.fromDate(DateTime.now()),
-      id: math.Random().nextInt(9999).toString() + DateTime.now().millisecondsSinceEpoch.toString(),
+      id: random + milliseconds,
       discount: 0,
       items: cart.cartItems,
       status: OrderStatus.pending,
