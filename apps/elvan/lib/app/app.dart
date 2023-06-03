@@ -65,7 +65,9 @@ class MyApp extends HookConsumerWidget {
           debugShowCheckedModeBanner: false,
           title: 'Elvan',
           routerDelegate: appRouter.delegate(),
-          routeInformationParser: appRouter.defaultRouteParser(includePrefixMatches: true),
+          routeInformationParser: appRouter.defaultRouteParser(
+            includePrefixMatches: true,
+          ),
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -79,7 +81,9 @@ class MyApp extends HookConsumerWidget {
           locale: const Locale('sv', ''),
           theme: ThemeData(
               primarySwatch: Colors.pink,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.pink,
+              ),
               useMaterial3: true,
               appBarTheme: const AppBarTheme(
                 systemOverlayStyle: SystemUiOverlayStyle(
@@ -89,7 +93,19 @@ class MyApp extends HookConsumerWidget {
                   statusBarIconBrightness: Brightness.dark,
                   statusBarBrightness: Brightness.light,
                 ),
-              )),
+              ),
+              navigationBarTheme: NavigationBarThemeData(
+                  backgroundColor: AppColors.primaryRed,
+                  labelTextStyle: MaterialStatePropertyAll(
+                    Theme.of(context).textTheme.labelMedium?.copyWith(
+                          color: AppColors.white,
+                        ),
+                  ),
+                  iconTheme: const MaterialStatePropertyAll(
+                    IconThemeData(
+                      color: AppColors.white,
+                    ),
+                  ))),
         );
       },
     );

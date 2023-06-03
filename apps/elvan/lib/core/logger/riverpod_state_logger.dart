@@ -12,7 +12,6 @@ class StateLogger extends ProviderObserver {
     Object? newValue,
     ProviderContainer container,
   ) {
-    // TODO use a proper logger
     logInfo(
       'Provider: ${provider.name ?? provider.runtimeType} changed',
     );

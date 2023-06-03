@@ -56,9 +56,15 @@ class AuthScreen extends HookConsumerWidget {
                   TextField(
                     controller: emailTextController,
                     decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15.0,
+                      ),
 
-                      prefixIcon: const Icon(Icons.person, color: AppColors.grey, size: 20),
+                      prefixIcon: const Icon(
+                        Icons.person,
+                        color: AppColors.grey,
+                        size: 20,
+                      ),
                       hintText: AppLocalizations.of(context)?.email ?? 'Email',
                       //rounded white border
                       border: const OutlineInputBorder(

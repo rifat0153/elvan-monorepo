@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:elvan_shared/domain_models/order/order_status.dart';
 import 'package:elvan_shared/dtos/order/order_dto.dart';
+import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:elvan/core/firebase/firebase_providers.dart';
@@ -61,7 +62,11 @@ class OrderRepositoryImpl implements OrderRepository {
         .limit(limit)
         .get();
 
-    final orderDtos = orders.docs.map((e) => OrderDto.fromJson(e.data())).toList();
+    final orderDtos = orders.docs
+        .map(
+          (e) => OrderDto.fromJson(e.data()),
+        )
+        .toList();
 
     return orderDtos;
   }
@@ -82,7 +87,13 @@ class OrderRepositoryImpl implements OrderRepository {
 
   @override
   Stream<OrderDto> getSingleOrderStream(String orderID) {
-    return firebaseFirestore.collection('orders').doc(orderID).snapshots().map(
+    return firebaseFirestore
+        .collection(
+          'orders',
+        )
+        .doc(orderID)
+        .snapshots()
+        .map(
           (event) => OrderDto.fromJson(
             event.data()!,
           ),
@@ -145,16 +156,21 @@ class OrderRepositoryImpl implements OrderRepository {
       ],
     ).get();
 
-    print("on going orders count: ${result.docs.length}");
-    print(result.docs.isNotEmpty);
+    debugPrint("on going orders count: ${result.docs.length}");
 
     return result.docs.isNotEmpty;
   }
 
   @override
   Stream<bool> isTakingOrder() {
-    return firebaseFirestore.collection('settings').doc('default-001').snapshots().map((event) {
-      print("is taking order: ${event.data()?['takingOrder']}");
+    return firebaseFirestore
+        .collection('settings')
+        .doc(
+          'default-001',
+        )
+        .snapshots()
+        .map((event) {
+      debugPrint("is taking order: ${event.data()?['takingOrder']}");
       final bool isTaking = event.data()?['takingOrder'] ?? false;
       return isTaking;
     });
