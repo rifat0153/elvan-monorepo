@@ -19,6 +19,7 @@ command:
     usePubspecOverrides: true
 
 scripts:
+  
   pod_install:
     run: melos exec -- "pod install"
     description: Run `pod install` in all packages
