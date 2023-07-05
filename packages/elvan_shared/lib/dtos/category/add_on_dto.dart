@@ -12,15 +12,13 @@ class AddOnDto with _$AddOnDto {
     required String title,
     required double price,
     String? imageUrl,
-    @Default(false)
-        bool isSelected,
-    @Default(0)
-        int quantitySelected,
+    @Default(false) bool isSelected,
+    @Default(0) int quantitySelected,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _AddOnDto;
 
   factory AddOnDto.fromJson(Map<String, dynamic> json) => _$AddOnDtoFromJson(json);

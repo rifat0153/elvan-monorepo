@@ -16,23 +16,17 @@ class ElvanUserDto with _$ElvanUserDto {
     String? phone,
     String? address,
     String? role,
-    @Default(0)
-        double totalSpent,
-    @Default(0)
-        int totalOrders,
-    @Default(0)
-        int totalOrdersCancelled,
-    @Default(0)
-        int totalOrdersDelivered,
-    @Default(0)
-        int totalOrdersPending,
-    @Default(0)
-        int totalOrdersRejected,
+    @Default(0) double totalSpent,
+    @Default(0) int totalOrders,
+    @Default(0) int totalOrdersCancelled,
+    @Default(0) int totalOrdersDelivered,
+    @Default(0) int totalOrdersPending,
+    @Default(0) int totalOrdersRejected,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _ElvanUserDto;
 
   factory ElvanUserDto.fromJson(Map<String, dynamic> json) => _$ElvanUserDtoFromJson(json);

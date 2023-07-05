@@ -13,32 +13,29 @@ class OrderDto with _$OrderDto {
   const factory OrderDto({
     required String id,
     required String userId,
-    @Default([])
-        List<CartItemDto> items,
+    @Default([]) List<CartItemDto> items,
     required double total,
     required double subTotal,
-    @Default(0)
-        double discount,
+    @Default(0) double discount,
     @JsonKey(
       fromJson: OrderStatusDto.fromJson,
       toJson: OrderStatusDto.toJson,
     )
-        required OrderStatusDto status,
+    required OrderStatusDto status,
     String? paymentMethod,
     String? paymentStatus,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? orderAcceptedAt,
+    Timestamp? orderAcceptedAt,
     int? orderPreparationTime,
-    @Default([])
-        List<String> instructions,
+    @Default([]) List<String> instructions,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _Order;
 
   factory OrderDto.fromJson(Map<String, dynamic> json) => _$OrderDtoFromJson(json);

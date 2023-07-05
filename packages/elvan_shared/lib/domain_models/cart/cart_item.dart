@@ -19,13 +19,12 @@ class CartItem with _$CartItem {
     required double price,
     required int quantity,
     double? discount,
-    @Default([])
-        List<String> instructions,
+    @Default([]) List<String> instructions,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _CartItem;
 
   factory CartItem.fromJson(Map<String, dynamic> json) => _$CartItemFromJson(json);

@@ -22,26 +22,19 @@ class FoodItemDto with _$FoodItemDto {
     String? categoryTitle,
     String? description,
     String? imageUrl,
-    @Default(false)
-        bool isTopPick,
-    @Default(0)
-        int quantity,
-    @Default([])
-        List<String> tags,
-    @Default([])
-        List<String> ingredients,
-    @Default(false)
-        bool isAvailable,
-    @Default([])
-        List<BuildStepDto> buildStepsOverrides,
-    @Default([])
-        List<String> allergens,
+    @Default(false) bool isTopPick,
+    @Default(0) int quantity,
+    @Default([]) List<String> tags,
+    @Default([]) List<String> ingredients,
+    @Default(false) bool isAvailable,
+    @Default([]) List<BuildStepDto> buildStepsOverrides,
+    @Default([]) List<String> allergens,
     int? timeToPrepareInMinutes,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _FoodItemDto;
 
   factory FoodItemDto.fromJson(Map<String, dynamic> json) => _$FoodItemDtoFromJson(json);

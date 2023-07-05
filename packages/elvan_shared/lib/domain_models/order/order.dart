@@ -25,22 +25,21 @@ class Order with _$Order {
       fromJson: OrderStatus.fromDto,
       toJson: OrderStatus.toJson,
     )
-        required OrderStatus status,
+    required OrderStatus status,
     String? paymentMethod,
     String? paymentStatus,
-    @Default([])
-        List<String> instructions,
+    @Default([]) List<String> instructions,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? orderAcceptedAt,
+    Timestamp? orderAcceptedAt,
     int? orderPreparationTime,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _Order;
 
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);

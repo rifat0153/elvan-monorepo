@@ -14,18 +14,15 @@ class AddOn with _$AddOn {
     String? id,
     required String title,
     required double price,
-    @Default(false)
-        bool includeInPrice,
+    @Default(false) bool includeInPrice,
     String? imageUrl,
-    @Default(false)
-        bool isSelected,
-    @Default(0)
-        int quantitySelected,
+    @Default(false) bool isSelected,
+    @Default(0) int quantitySelected,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _AddOn;
 
   AddOn toggleIsSelected() => copyWith(isSelected: !isSelected);

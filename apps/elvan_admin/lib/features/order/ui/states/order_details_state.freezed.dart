@@ -21,15 +21,12 @@ mixin _$OrderDetatilsState {
   Order? get order => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $OrderDetatilsStateCopyWith<OrderDetatilsState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $OrderDetatilsStateCopyWith<OrderDetatilsState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OrderDetatilsStateCopyWith<$Res> {
-  factory $OrderDetatilsStateCopyWith(
-          OrderDetatilsState value, $Res Function(OrderDetatilsState) then) =
-      _$OrderDetatilsStateCopyWithImpl<$Res, OrderDetatilsState>;
+  factory $OrderDetatilsStateCopyWith(OrderDetatilsState value, $Res Function(OrderDetatilsState) then) = _$OrderDetatilsStateCopyWithImpl<$Res, OrderDetatilsState>;
   @useResult
   $Res call({bool isDetailsPanelOpen, int xOffset, Order? order});
 
@@ -37,8 +34,7 @@ abstract class $OrderDetatilsStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OrderDetatilsStateCopyWithImpl<$Res, $Val extends OrderDetatilsState>
-    implements $OrderDetatilsStateCopyWith<$Res> {
+class _$OrderDetatilsStateCopyWithImpl<$Res, $Val extends OrderDetatilsState> implements $OrderDetatilsStateCopyWith<$Res> {
   _$OrderDetatilsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -83,11 +79,8 @@ class _$OrderDetatilsStateCopyWithImpl<$Res, $Val extends OrderDetatilsState>
 }
 
 /// @nodoc
-abstract class _$$_OrderDetatilsStateCopyWith<$Res>
-    implements $OrderDetatilsStateCopyWith<$Res> {
-  factory _$$_OrderDetatilsStateCopyWith(_$_OrderDetatilsState value,
-          $Res Function(_$_OrderDetatilsState) then) =
-      __$$_OrderDetatilsStateCopyWithImpl<$Res>;
+abstract class _$$_OrderDetatilsStateCopyWith<$Res> implements $OrderDetatilsStateCopyWith<$Res> {
+  factory _$$_OrderDetatilsStateCopyWith(_$_OrderDetatilsState value, $Res Function(_$_OrderDetatilsState) then) = __$$_OrderDetatilsStateCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool isDetailsPanelOpen, int xOffset, Order? order});
@@ -97,12 +90,8 @@ abstract class _$$_OrderDetatilsStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_OrderDetatilsStateCopyWithImpl<$Res>
-    extends _$OrderDetatilsStateCopyWithImpl<$Res, _$_OrderDetatilsState>
-    implements _$$_OrderDetatilsStateCopyWith<$Res> {
-  __$$_OrderDetatilsStateCopyWithImpl(
-      _$_OrderDetatilsState _value, $Res Function(_$_OrderDetatilsState) _then)
-      : super(_value, _then);
+class __$$_OrderDetatilsStateCopyWithImpl<$Res> extends _$OrderDetatilsStateCopyWithImpl<$Res, _$_OrderDetatilsState> implements _$$_OrderDetatilsStateCopyWith<$Res> {
+  __$$_OrderDetatilsStateCopyWithImpl(_$_OrderDetatilsState _value, $Res Function(_$_OrderDetatilsState) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -131,9 +120,7 @@ class __$$_OrderDetatilsStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_OrderDetatilsState extends _OrderDetatilsState {
-  const _$_OrderDetatilsState(
-      {this.isDetailsPanelOpen = false, this.xOffset = 0, this.order})
-      : super._();
+  const _$_OrderDetatilsState({this.isDetailsPanelOpen = false, this.xOffset = 0, this.order}) : super._();
 
   @override
   @JsonKey()
@@ -154,29 +141,22 @@ class _$_OrderDetatilsState extends _OrderDetatilsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OrderDetatilsState &&
-            (identical(other.isDetailsPanelOpen, isDetailsPanelOpen) ||
-                other.isDetailsPanelOpen == isDetailsPanelOpen) &&
+            (identical(other.isDetailsPanelOpen, isDetailsPanelOpen) || other.isDetailsPanelOpen == isDetailsPanelOpen) &&
             (identical(other.xOffset, xOffset) || other.xOffset == xOffset) &&
             (identical(other.order, order) || other.order == order));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, isDetailsPanelOpen, xOffset, order);
+  int get hashCode => Object.hash(runtimeType, isDetailsPanelOpen, xOffset, order);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OrderDetatilsStateCopyWith<_$_OrderDetatilsState> get copyWith =>
-      __$$_OrderDetatilsStateCopyWithImpl<_$_OrderDetatilsState>(
-          this, _$identity);
+  _$$_OrderDetatilsStateCopyWith<_$_OrderDetatilsState> get copyWith => __$$_OrderDetatilsStateCopyWithImpl<_$_OrderDetatilsState>(this, _$identity);
 }
 
 abstract class _OrderDetatilsState extends OrderDetatilsState {
-  const factory _OrderDetatilsState(
-      {final bool isDetailsPanelOpen,
-      final int xOffset,
-      final Order? order}) = _$_OrderDetatilsState;
+  const factory _OrderDetatilsState({final bool isDetailsPanelOpen, final int xOffset, final Order? order}) = _$_OrderDetatilsState;
   const _OrderDetatilsState._() : super._();
 
   @override
@@ -187,6 +167,5 @@ abstract class _OrderDetatilsState extends OrderDetatilsState {
   Order? get order;
   @override
   @JsonKey(ignore: true)
-  _$$_OrderDetatilsStateCopyWith<_$_OrderDetatilsState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_OrderDetatilsStateCopyWith<_$_OrderDetatilsState> get copyWith => throw _privateConstructorUsedError;
 }

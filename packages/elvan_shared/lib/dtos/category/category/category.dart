@@ -14,17 +14,15 @@ class Category with _$Category {
   const factory Category({
     String? id,
     required String title,
-    @Default(false)
-        bool isSelected,
+    @Default(false) bool isSelected,
     String? description,
     String? imageUrl,
-    @Default([])
-        List<BuildStep> buildSteps,
+    @Default([]) List<BuildStep> buildSteps,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _Category;
 
   factory Category.fromJson(Map<String, dynamic> json) => _$CategoryFromJson(json);

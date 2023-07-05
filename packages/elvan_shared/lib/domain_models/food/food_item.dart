@@ -24,30 +24,22 @@ class FoodItem with _$FoodItem {
     required String categoryId,
     required String categoryTitle,
     double? discount,
-    @Default(false)
-        bool isTopPick,
+    @Default(false) bool isTopPick,
     String? description,
     String? imageUrl,
-    @Default(false)
-        bool isFavorite,
-    @Default(0)
-        int quantity,
-    @Default([])
-        List<String> tags,
-    @Default([])
-        List<String> ingredients,
-    @Default([])
-        List<BuildStep> buildStepsOverrides,
-    @Default([])
-        List<String> allergens,
+    @Default(false) bool isFavorite,
+    @Default(0) int quantity,
+    @Default([]) List<String> tags,
+    @Default([]) List<String> ingredients,
+    @Default([]) List<BuildStep> buildStepsOverrides,
+    @Default([]) List<String> allergens,
     int? timeToPrepareInMinutes,
-    @Default(false)
-        bool isAvailable,
+    @Default(false) bool isAvailable,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _FoodItem;
 
   factory FoodItem.fromDto(FoodItemDto foodItemDto) {

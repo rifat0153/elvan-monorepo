@@ -28,6 +28,10 @@ scripts:
     run: melos exec -- "flutter pub get"
     description: Run `flutter pub get` in all packages
 
+  build_runner:
+    run: melos exec -- "dart run build_runner build -d"
+    description: Run `dart run build_runner build -d` in all packages
+
   analyze:
     run: melos exec -- "flutter analyze"
     description: Run `flutter analyze` in all packages

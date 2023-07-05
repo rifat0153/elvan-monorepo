@@ -14,13 +14,12 @@ abstract class CategoryDto with _$CategoryDto {
     required String title,
     String? description,
     String? imageUrl,
-    @Default([])
-        List<BuildStepDto> buildSteps,
+    @Default([]) List<BuildStepDto> buildSteps,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
-        Timestamp? createdAt,
+    Timestamp? createdAt,
   }) = _CategoryDto;
 
   factory CategoryDto.fromJson(Map<String, dynamic> json) => _$CategoryDtoFromJson(json);
