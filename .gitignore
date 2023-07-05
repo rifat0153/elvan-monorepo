@@ -1,2 +1,7 @@
 .dart_tool
 .idea
+
+# ignore generated files
+*.freezed.dart
+*.g.dart
+
