@@ -1,9 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-
 import 'package:elvan/app/router/app_router.gr.dart';
-import 'package:elvan/app/router/hero_empty_route_page.dart';
 import 'package:elvan/app/router/not_found_screen.dart';
 import 'package:elvan/features/auth/ui/screens/auth_screen.dart';
 import 'package:elvan/features/auth/ui/screens/forget_screen.dart';
@@ -18,6 +15,7 @@ import 'package:elvan/features/order/ui/order_records/screens/order_records.dart
 import 'package:elvan/features/profile/ui/screens/profile_screen.dart';
 import 'package:elvan/features/tabs/ui/screens/bottom_tab_screen.dart';
 import 'package:elvan/features/tabs/ui/screens/home_screen.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final appRouterProvider = Provider.autoDispose<AppRouter>((ref) {
   //final user = ref.read(currentUserProvider);
@@ -73,8 +71,7 @@ final appRouterProvider = Provider.autoDispose<AppRouter>((ref) {
     AutoRoute(
       path: '/food',
       name: 'FoodRouter',
-      // page: EmptyRouterPage,
-      page: HeroEmptyRouterPage,
+      page: EmptyRouterPage,
       children: [
         AutoRoute(
           path: '',
@@ -104,7 +101,6 @@ final appRouterProvider = Provider.autoDispose<AppRouter>((ref) {
       path: '/order',
       name: 'OrderRouter',
       page: EmptyRouterPage,
-      // page: HeroEmptyRouterPage,
       children: [
         AutoRoute(
           path: '',

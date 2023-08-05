@@ -47,19 +47,6 @@ class TopPickCard extends ConsumerWidget {
                     Positioned(
                       top: imageOffset,
                       left: imageOffset,
-                      // child: Hero(
-                      //   tag: foodItem.id ?? '',
-                      //   child: CachedNetworkImage(
-                      //     imageUrl: foodItem.imageUrl!,
-                      //     fit: BoxFit.cover,
-                      //     width: imageRadius * 2,
-                      //     height: imageRadius * 2,
-                      //     placeholder: (context, url) => const CircularProgressIndicator(
-                      //       color: AppColors.primaryRed,
-                      //     ),
-                      //     errorWidget: (context, url, error) => const Icon(Icons.error),
-                      //   ),
-
                       child: CircleAvatar(
                         radius: imageRadius,
                         backgroundImage: CachedNetworkImageProvider(foodItem.imageUrl!),

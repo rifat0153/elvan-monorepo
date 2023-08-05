@@ -60,14 +60,11 @@ class FoodListCard extends HookConsumerWidget {
                         left: imageLeftOffset,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(imageRadius),
-                          child: Hero(
-                            tag: foodItem.id!,
-                            child: CachedNetworkImage(
-                              imageUrl: foodItem.imageUrl ?? '',
-                              fit: BoxFit.cover,
-                              width: imageRadius * 2,
-                              height: imageRadius * 2,
-                            ),
+                          child: CachedNetworkImage(
+                            imageUrl: foodItem.imageUrl ?? '',
+                            fit: BoxFit.cover,
+                            width: imageRadius * 2,
+                            height: imageRadius * 2,
                           ),
                         ),
                       ),

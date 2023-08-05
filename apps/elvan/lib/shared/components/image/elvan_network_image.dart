@@ -19,23 +19,20 @@ class ElvanNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: foodId,
-      child: CachedNetworkImage(
-        imageUrl: imageUrl,
-        width: width,
-        height: height,
-        fit: fit,
-        errorWidget: (context, url, error) {
-          return Image.asset(
-            // TODO: Add a placeholder image
-            'assets/images/food_placeholder.png',
-            width: width,
-            height: height,
-            fit: BoxFit.cover,
-          );
-        },
-      ),
+    return CachedNetworkImage(
+      imageUrl: imageUrl,
+      width: width,
+      height: height,
+      fit: fit,
+      errorWidget: (context, url, error) {
+        return Image.asset(
+          // TODO: Add a placeholder image
+          'assets/images/food_placeholder.png',
+          width: width,
+          height: height,
+          fit: BoxFit.cover,
+        );
+      },
     );
   }
 }
